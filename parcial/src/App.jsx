@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import {getProfiles} from "./lib/getProfiles";
+import "./Superior.css";
+import "./Medio.css";
 import Profile from "./components/Profile";
+import Superior from './components/Superior';
+import Medio from './components/Medio';
+import Inferior from './components/Inferior';
 
 function App() {
   const [profiles, setprofiles] = useState([]);
@@ -12,6 +16,9 @@ function App() {
       {profiles.map((profile) => (
         <Profile key={profile.id} profile={profile}/>
       ))}
+      <Superior />
+      <Medio/>
+      <Inferior/>
     </section>
   </>
   );
